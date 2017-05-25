@@ -1,0 +1,35 @@
+.skills {
+	padding-bottom: 0.625rem;
+}
+
+.skills-list {
+	list-style: none;
+	list-style-position: inside;
+	margin: 1rem;
+	padding: 0;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	align-items: center;
+	@include bp(medium) {
+		flex-direction: row;
+		justify-content: space-around;
+		font-size: 1.25rem;
+		margin: 1rem 2rem;
+	}
+	li {
+		padding: 0.313rem;
+		margin: 0.313rem;
+		background-color: lighten($color-primary, 15%);
+		color: $color-highlight;
+		border-radius: 0.313rem;
+		width: 16rem;
+		text-align: center;
+		@include bp(medium) {
+			background-color: $color-complement;
+		}
+	}
+	li:nth-of-type(odd) {
+		background-color: $color-complement;
+	}
+}

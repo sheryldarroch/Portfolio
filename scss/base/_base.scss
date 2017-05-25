@@ -1,0 +1,65 @@
+/*================= Base Styles ================*/
+* {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $font-primary;
+	color: darken($color-secondary, 20%);
+	background-color: lighten($color-secondary, 40%);
+}
+
+h1,
+h3 {
+	font-family: $font-secondary;
+}
+
+h1 {
+	margin: 0;
+	padding: 1rem;
+	@include bp(large) {
+		text-align: center;
+	}
+}
+
+.sub-heading {
+	display: block;
+	text-align: center;
+	padding: 0 1rem 1rem;
+}
+
+a {
+	text-decoration: none;
+	color: darken($color-secondary, 20%);
+	outline: none;
+}
+
+/*================= Icons ================*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?6zgb95');
+  src:  url('../fonts/icomoon.eot?6zgb95#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?6zgb95') format('truetype'),
+    url('../fonts/icomoon.woff?6zgb95') format('woff'),
+    url('../fonts/icomoon.svg?6zgb95#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;	
+}
+

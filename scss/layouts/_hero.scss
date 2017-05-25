@@ -1,0 +1,51 @@
+/*================== Hero Styles ====================*/
+.hero {
+	text-align: center;
+	background-color: lighten($color-primary, 35%);
+	background: radial-gradient(ellipse at center, rgba(128,128,128,0.4) 20%, rgba(248,158,250, 0.9)), url("../img/wood-bg-tny.jpg") center center no-repeat;
+	background-size: cover;
+	@include bp(medium) {
+		margin-top: 4.5rem;
+	}
+
+	span {
+		font-family: $font-secondary;
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: $color-primary;
+		text-shadow: 0.1rem 0.1rem rgba(0,0,0,0.8), 0.15rem 0.15rem 0.15rem rgba(195,195,195, 0.8);
+		@include bp(medium) {
+			font-size: 2rem;
+		}
+	}
+}
+
+.logo-hero {
+	font-size: 2.25rem;
+	color: darken($color-secondary, 15%);
+	text-shadow: 0.125rem 0.125rem rgba(0,0,0,0.5), 0.25rem 0.25rem 0.25rem rgba(255,255,255,0.8);
+	margin-bottom: 0;
+	padding-bottom: 0.313rem;
+	@include bp(medium) {
+		font-size: 4rem;
+	}
+}
+	
+.hero-desc {
+	width: 80%;
+	margin: 0 auto;
+	padding-bottom: 1rem;
+	color: darken($color-highlight, 10%);
+	@include bp(medium) {
+		font-size: 1.5rem;
+	}
+	@include bp(large) {
+		width: 60%;
+	}
+	p:nth-of-type(3) {
+	display: none;
+	@include bp(medium) {
+		display: block;
+	}
+	}
+}

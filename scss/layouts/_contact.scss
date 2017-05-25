@@ -1,0 +1,65 @@
+.contact {
+	background-color: lighten($color-primary, 35%);
+	margin: 0;
+}
+
+.contact-list {
+	list-style: none;
+	list-style-position: inside;
+	padding: 1rem;
+	margin: 0;
+	text-align: center;
+	padding: 0;
+	@include bp(medium) {
+		display: flex;
+		margin: 0;
+	}
+	@include bp(large) {
+		width: 80%;
+		margin: 0 auto;
+	}
+	li {
+		width: 15rem;
+		margin: 0 auto;
+		padding: 0.625rem 0;
+		@include bp(large) {
+			width: 20rem;
+			margin: 0 auto;
+		}
+	}
+}
+
+.contact-list li .social-icon {
+	width: 2.5rem;
+	@include bp(medium) {
+		width: 3.5rem;
+	}
+}
+
+.social {
+	margin-top: 0.313rem;
+	@include bp(medium) {
+		font-size: 1.25rem;
+	}
+}
+
+.social-linkedin,
+.social-github,
+.social-twitter,
+.social-email {
+	transform: translatex(2000px);
+	opacity: 0;
+	transition: all .7s cubic-bezier(0.68, -0.25, 0.265, 1.25);
+}
+
+.social-email {
+	cursor: pointer;
+}
+
+.contact-list li:hover .social-linkedin,
+.contact-list li:hover .social-github,
+.contact-list li:hover .social-twitter,
+.contact-list li:hover .social-email {
+	transform: translatex(0);
+	opacity: 1;
+}

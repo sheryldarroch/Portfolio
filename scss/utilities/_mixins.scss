@@ -1,0 +1,11 @@
+/*========================== Mixins ==========================*/
+
+
+/*========================== Media Query Mixin ==========================*/
+@mixin bp($point) {
+	@if $point == medium {
+		@media screen and (min-width: $bp-medium) { @content; }
+	} @else if $point == large {
+			@media screen and (min-width: $bp-large) { @content; }
+		}
+}
