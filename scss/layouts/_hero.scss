@@ -1,7 +1,7 @@
 /*================== Hero Styles ====================*/
 .hero {
 	text-align: center;
-	background-color: lighten($color-primary, 35%);
+	background-color: $color-primary--lte;
 	background: radial-gradient(ellipse at center, rgba(128,128,128,0.4) 20%, rgba(248,158,250, 0.9)), url("../img/wood-bg-tny.jpg") center center no-repeat;
 	background-size: cover;
 	@include bp(medium) {
@@ -22,7 +22,7 @@
 
 .logo-hero {
 	font-size: 2.25rem;
-	color: darken($color-secondary, 15%);
+	color: $color-secondary--drk;
 	text-shadow: 0.125rem 0.125rem rgba(0,0,0,0.5), 0.25rem 0.25rem 0.25rem rgba(255,255,255,0.8);
 	margin-bottom: 0;
 	padding-bottom: 0.313rem;

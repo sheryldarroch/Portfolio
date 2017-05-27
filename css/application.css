@@ -25,9 +25,7 @@ summary {
 audio,
 canvas,
 video {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1; }
+  display: inline-block; }
 
 /**
  * Prevent modern browsers from displaying `audio` without controls.
@@ -311,10 +309,7 @@ legend {
   border: 0;
   /* 1 */
   padding: 0;
-  white-space: normal;
-  /* 2 */
-  *margin-left: -7px;
-  /* 3 */ }
+  white-space: normal; }
 
 /**
  * 1. Correct font size not being inherited in all browsers.
@@ -330,10 +325,7 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */
-  vertical-align: baseline;
-  /* 3 */
-  *vertical-align: middle;
-  /* 3 */ }
+  vertical-align: baseline; }
 
 /**
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
@@ -368,10 +360,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
-  cursor: pointer;
-  /* 3 */
-  *overflow: visible;
-  /* 4 */ }
+  cursor: pointer; }
 
 /**
  * Re-set default cursor for disabled elements.
@@ -390,12 +379,7 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
-  padding: 0;
-  /* 2 */
-  *height: 13px;
-  /* 3 */
-  *width: 13px;
-  /* 3 */ }
+  padding: 0; }
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
@@ -463,17 +447,25 @@ body {
   padding: 0;
   font-family: "Abel", "sans-serif";
   color: #4d4d4d;
-  background-color: #e6e6e6; }
+  background-color: #d9d9d9; }
+
+.flex {
+  display: flex;
+  align-items: center; }
+
+.container {
+  margin: 0;
+  padding-bottom: 0.625rem; }
 
 h1,
 h3 {
   font-family: "Alike Angular", "serif"; }
 
-h1 {
+.title {
   margin: 0;
   padding: 1rem; }
   @media screen and (min-width: 1024px) {
-    h1 {
+    .title {
       text-align: center; } }
 
 .sub-heading {
@@ -509,9 +501,8 @@ a {
   margin: 0;
   padding: 0 1rem;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  flex-direction: row;
+  justify-content: space-between; }
   @media screen and (min-width: 768px) {
     .nav-main {
       position: fixed;
@@ -529,15 +520,17 @@ a {
   .logo b {
     color: #f130f4; }
 
-@media screen and (min-width: 768px) {
-  .nav-icon {
-    display: none; } }
-.nav-icon .nav-icon-line {
-  content: '';
-  width: 1.5rem;
-  height: 0.25em;
-  background-color: #4d4d4d;
-  margin: 0.25rem 0; }
+.nav-icon {
+  cursor: pointer; }
+  @media screen and (min-width: 768px) {
+    .nav-icon {
+      display: none; } }
+  .nav-icon .nav-icon-line {
+    content: '';
+    width: 1.5rem;
+    height: 0.25em;
+    background-color: #4d4d4d;
+    margin: 0.25rem 0; }
 
 .nav-drop {
   position: absolute;
@@ -555,8 +548,8 @@ a {
   @media screen and (min-width: 768px) {
     .nav-menu {
       display: flex;
-      justify-content: space-around;
-      align-items: center; } }
+      flex-direction: row;
+      justify-content: space-around; } }
   .nav-menu li {
     font-size: 1.25rem; }
     .nav-menu li a {
@@ -590,7 +583,7 @@ a {
 
 .logo-hero {
   font-size: 2.25rem;
-  color: #5a5a5a;
+  color: #676767;
   text-shadow: 0.125rem 0.125rem rgba(0, 0, 0, 0.5), 0.25rem 0.25rem 0.25rem rgba(255, 255, 255, 0.8);
   margin-bottom: 0;
   padding-bottom: 0.313rem; }
@@ -615,16 +608,47 @@ a {
       .hero-desc p:nth-of-type(3) {
         display: block; } }
 
+/*================== Gallery Styles ====================*/
+.overlay, .overlay2 {
+  position: absolute;
+  top: 0.313rem;
+  left: 0.313rem;
+  background-color: rgba(80, 80, 80, 0.8);
+  color: #dac0e2;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.313rem;
+  width: 16.25rem;
+  height: 12.5rem;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity .5s; }
+  @media screen and (min-width: 1024px) {
+    .overlay, .overlay2 {
+      width: 20.25rem;
+      height: 15.625rem; } }
+
+.overlay p, .overlay2 a, .email-form button {
+  padding: 0.25rem;
+  margin: 0.625rem;
+  font-size: 0.9rem;
+  background-color: #fcd9fd;
+  color: #4d4d4d;
+  box-shadow: inset 0 0 0.313rem 0.125rem #b3b3b3;
+  border: solid 0.125rem #9a9a9a;
+  border-radius: 0.313rem; }
+  @media screen and (min-width: 1024px) {
+    .overlay p, .overlay2 a, .email-form button {
+      padding: 0.5rem;
+      margin: 1.5rem;
+      font-size: 1rem; } }
+
 .gallery {
-  position: relative;
-  margin: 0;
-  padding-bottom: 0.625rem; }
+  position: relative; }
 
 .gallery-grid {
-  display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center; }
+  justify-content: space-around; }
 
 .column {
   position: relative; }
@@ -638,34 +662,19 @@ a {
       .column img {
         width: 20rem; } }
 
-.overlay {
-  position: absolute;
-  top: 0.313rem;
-  left: 0.313rem;
-  background-color: rgba(80, 80, 80, 0.8);
-  color: #dac0e2;
-  text-align: center;
+.overlay h3 {
   padding: 1rem;
-  border-radius: 0.313rem;
-  width: 16.25rem;
-  height: 12.5rem;
-  z-index: 10;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity .5s; }
+  margin: 0;
+  font-size: 1.25rem; }
   @media screen and (min-width: 1024px) {
-    .overlay {
-      width: 20.25rem;
-      height: 15.625rem; } }
-  .overlay h3 {
-    padding: 1rem;
-    margin: 0;
-    font-size: 1.25rem; }
-    @media screen and (min-width: 1024px) {
-      .overlay h3 {
-        margin: 1rem; } }
-  .overlay span {
-    font-size: 1rem; }
+    .overlay h3 {
+      margin: 1rem; } }
+.overlay span {
+  display: block;
+  font-size: 1rem; }
+.overlay p {
+  display: inline-block;
+  cursor: pointer; }
 
 .overlay:hover {
   opacity: 1; }
@@ -674,29 +683,19 @@ a {
   background-color: #fcd9fd;
   color: #1a1a1a;
   z-index: 20;
-  position: absolute;
-  top: 0.313rem;
-  left: 0.313rem;
-  opacity: 0;
   transform: translatey(-2000px);
-  text-align: center;
   padding: 0.5rem;
-  border-radius: 0.313rem;
   box-shadow: 0.313rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5), 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.4);
-  width: 16.25rem;
-  height: 12.5rem;
-  cursor: pointer;
   transition: all 0.7s cubic-bezier(0.68, -0.25, 0.265, 1.25); }
   @media screen and (min-width: 1024px) {
     .overlay2 {
-      width: 20.25rem;
-      height: 15.625rem;
       padding: 1rem; } }
   .overlay2 .overlay-close {
     position: absolute;
     top: 0.125rem;
     right: 0.5rem;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    cursor: pointer; }
   .overlay2 h3 {
     padding: 0;
     margin: 0;
@@ -713,48 +712,54 @@ a {
         font-size: 1rem;
         margin-bottom: 0.5rem; } }
   .overlay2 a {
-    padding: 0.25rem;
-    margin: 0 0.125rem 0.625rem;
-    font-size: 0.9rem;
+    margin: 0.125rem;
     background-color: #676767;
-    color: #f891f9;
+    color: #f679f8;
     box-shadow: inset 0 0 0.313rem 0.125rem #e6e6e6;
-    border: solid 0.125rem #676767;
-    border-radius: 0.313rem; }
+    border-color: #676767;
+    cursor: pointer; }
     @media screen and (min-width: 1024px) {
       .overlay2 a {
-        padding: 0.5rem;
-        margin: 0.25rem;
-        font-size: 1rem; } }
+        margin: 0.25rem; } }
 
 #APIOverlay {
   padding: 1.25rem 0.5rem  0.5rem; }
 
-.skills {
-  padding-bottom: 0.625rem; }
+/*================== Skills Styles ====================*/
+.details {
+  flex-direction: column;
+  justify-content: space-around; }
+  @media screen and (min-width: 768px) {
+    .details {
+      flex-direction: row;
+      align-items: stretch; } }
+
+@media screen and (min-width: 768px) {
+  .skills {
+    flex-grow: 1; } }
+@media screen and (min-width: 1024px) {
+  .skills {
+    flex-grow: 2; } }
 
 .skills-list {
   list-style: none;
   list-style-position: inside;
   margin: 1rem;
   padding: 0;
-  display: flex;
   flex-flow: column wrap;
-  justify-content: space-between;
-  align-items: center; }
+  justify-content: space-between; }
   @media screen and (min-width: 768px) {
     .skills-list {
       flex-direction: row;
       justify-content: space-around;
-      font-size: 1.25rem;
       margin: 1rem 2rem; } }
   .skills-list li {
     padding: 0.313rem;
-    margin: 0.313rem;
+    margin: 0.125rem;
     background-color: #f679f8;
     color: #fff;
     border-radius: 0.313rem;
-    width: 16rem;
+    width: 13rem;
     text-align: center; }
     @media screen and (min-width: 768px) {
       .skills-list li {
@@ -762,20 +767,31 @@ a {
   .skills-list li:nth-of-type(odd) {
     background-color: #c69dd2; }
 
+/*================== Contact Styles ====================*/
+fieldset input[type="text"], fieldset input[type="email"], fieldset input[type="tel"], fieldset textarea {
+  margin: 0;
+  width: 100%;
+  border: none;
+  border-radius: 0.313rem;
+  height: 2rem; }
+
+fieldset input[type="text"]:focus, fieldset input[type="email"]:focus, fieldset input[type="tel"]:focus, fieldset textarea:focus {
+  border-bottom: solid 0.25rem #f679f8; }
+
 .contact {
   background-color: #fcd9fd;
-  margin: 0; }
+  padding-bottom: 0; }
 
 .contact-list {
   list-style: none;
   list-style-position: inside;
-  padding: 1rem;
   margin: 0;
-  text-align: center;
-  padding: 0; }
+  padding: 0;
+  flex-direction: column;
+  text-align: center; }
   @media screen and (min-width: 768px) {
     .contact-list {
-      display: flex;
+      flex-direction: row;
       margin: 0; } }
   @media screen and (min-width: 1024px) {
     .contact-list {
@@ -783,12 +799,11 @@ a {
       margin: 0 auto; } }
   .contact-list li {
     width: 15rem;
-    margin: 0 auto;
-    padding: 0.625rem 0; }
+    margin: 0; }
     @media screen and (min-width: 1024px) {
       .contact-list li {
         width: 20rem;
-        margin: 0 auto; } }
+        margin: 0; } }
 
 .contact-list li .social-icon {
   width: 2.5rem; }
@@ -806,7 +821,7 @@ a {
 .social-github,
 .social-twitter,
 .social-email {
-  transform: translatex(2000px);
+  transform: translatex(-2000px);
   opacity: 0;
   transition: all 0.7s cubic-bezier(0.68, -0.25, 0.265, 1.25); }
 
@@ -820,9 +835,59 @@ a {
   transform: translatex(0);
   opacity: 1; }
 
+.email-modal {
+  position: relative; }
+
+.email-form {
+  display: none;
+  position: absolute;
+  bottom: -2rem;
+  width: 80%;
+  left: 10%;
+  padding: 0.625rem;
+  background-color: #d9d9d9;
+  border-radius: 0.313rem;
+  border: solid 0.125rem #808080;
+  box-shadow: 0.313rem 0.313rem 0.313rem rgba(0, 0, 0, 0.5), 0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.4); }
+  @media screen and (min-width: 768px) {
+    .email-form {
+      width: 60%;
+      left: 20%;
+      padding: 1rem; } }
+  .email-form span {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0.313rem;
+    right: 0.625rem;
+    cursor: pointer; }
+  .email-form button {
+    display: block;
+    margin: 0.625rem auto; }
+
+fieldset {
+  border: none; }
+  fieldset label {
+    margin-top: 0.313rem;
+    margin-bottom: 0.625rem;
+    display: block; }
+  fieldset input[type="text"] {
+    background-color: #fef2fe; }
+  fieldset input[type="email"] {
+    background-color: #fef2fe; }
+  fieldset input[type="tel"] {
+    background-color: #fef2fe; }
+  fieldset textarea {
+    background-color: #fef2fe;
+    height: 5rem; }
+
+/*================== Education Styles ====================*/
+.ed-list li {
+  padding: 0.313rem 0.625rem;
+  list-style-type: circle; }
+
+/*================== Footer Styles ====================*/
 .footer {
-  background: #d9d9d9;
-  color: #343434;
+  color: #1a1a1a;
   text-align: center;
   padding: 1rem 0; }
 

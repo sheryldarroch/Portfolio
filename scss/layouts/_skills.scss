@@ -1,5 +1,21 @@
+/*================== Skills Styles ====================*/
+
+.details {
+	flex-direction: column;
+	justify-content: space-around;
+	@include bp(medium) {
+		flex-direction: row;
+		align-items: stretch;
+	}
+}
+
 .skills {
-	padding-bottom: 0.625rem;
+	@include bp(medium) {
+		flex-grow: 1;
+	}
+	@include bp(large) {
+		flex-grow: 2;
+	}
 }
 
 .skills-list {
@@ -7,23 +23,20 @@
 	list-style-position: inside;
 	margin: 1rem;
 	padding: 0;
-	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-between;
-	align-items: center;
 	@include bp(medium) {
 		flex-direction: row;
 		justify-content: space-around;
-		font-size: 1.25rem;
 		margin: 1rem 2rem;
 	}
 	li {
 		padding: 0.313rem;
-		margin: 0.313rem;
-		background-color: lighten($color-primary, 15%);
+		margin: 0.125rem;
+		background-color: $color-primary--md;
 		color: $color-highlight;
 		border-radius: 0.313rem;
-		width: 16rem;
+		width: 13rem;
 		text-align: center;
 		@include bp(medium) {
 			background-color: $color-complement;

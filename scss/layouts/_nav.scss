@@ -1,12 +1,12 @@
 /*================= Navigation Styles ===================*/
+
 .nav-main {
-	background: lighten($color-secondary, 35%);
+	background: $color-secondary--xlte;
 	margin: 0;
 	padding: 0 1rem;
 	width: 100%;
-	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
 	@include bp(medium) {
 		position: fixed;
 		top: 0;
@@ -28,14 +28,16 @@
 }
 
 .nav-icon {
+	cursor: pointer;
 	@include bp(medium) {
 		display: none;
+
 	}
 	.nav-icon-line {
 		content: '';
 		width: 1.5rem;
 		height: 0.25em;
-		background-color: darken($color-secondary, 20%);
+		background-color: $color-secondary--mdrk;
 		margin: 0.25rem 0;
 	}
 }
@@ -47,7 +49,7 @@
 	list-style-position: inside;
 	padding: 1rem;
 	border-radius: 0 0 0.5rem 0.5rem;
-	background-color: lighten($color-secondary, 35%);
+	background-color: $color-secondary--xlte;
 	li {
 		padding: 0.5rem 0;
 	}
@@ -57,8 +59,8 @@
 	display: none;
 	@include bp(medium) {
 		display: flex;
+		flex-direction: row;
 		justify-content: space-around;
-		align-items: center;
 	}
 	li {
 		font-size: 1.25rem;

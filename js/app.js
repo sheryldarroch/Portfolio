@@ -3,6 +3,9 @@ const navDrop = document.getElementById('nav-drop');
 let gallOver = document.getElementsByClassName('overlay');
 let gallOver2 = document.getElementsByClassName('overlay2');
 let overClose = document.getElementsByClassName('overlay-close');
+const email = document.getElementById('social-email');
+const emailPopup = document.getElementById('email-form');
+const formClose = document.getElementById('form-close');
 
 // NAVIGATION
 //Hide dropdown nav menu
@@ -10,8 +13,7 @@ navDrop.style.display ="none";
 
 // Toggle dropdown nav menu when name lines are clicked
 navIcon.addEventListener("click", ()=> {
-	let width = window.innerWidth;
-	if( width < 768 && navDrop.style.display !== "block") {
+	if( navDrop.style.display !== "block" ) {
 		navDrop.style.display = "block";
 	} else {
 		navDrop.style.display = "none";
@@ -33,10 +35,18 @@ for( i=0; i < gallOver.length; i++ ) {
 for( i=0; i < overClose.length; i++ ) {
 	overClose[i].addEventListener("click", (e)=>{
 		let x = e.target;
-		console.log(x);
 		let overlay = x.parentElement;
 		overlay.style.transform = "translatey(-2000px)";
 		overlay.style.opacity = "0";	
 	});
 }
 
+// Show email form when "send me an email" is clicked
+email.addEventListener("click", ()=>{
+	emailPopup.style.display = "block";
+});
+
+// Hide email form when "X" is clicked 
+formClose.addEventListener("click", ()=>{
+	emailPopup.style.display = "none";
+});

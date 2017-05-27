@@ -1,17 +1,31 @@
-.contact {
-	background-color: lighten($color-primary, 35%);
+/*================== Contact Styles ====================*/
+
+%input {
 	margin: 0;
+	width: 100%;
+	border: none;
+	border-radius: 0.313rem;
+	height: 2rem;
+}
+
+%focus {
+	border-bottom: solid 0.25rem $color-primary--md;
+}
+
+.contact {
+	background-color: $color-primary--lte;
+	padding-bottom: 0;
 }
 
 .contact-list {
 	list-style: none;
 	list-style-position: inside;
-	padding: 1rem;
 	margin: 0;
-	text-align: center;
 	padding: 0;
+	flex-direction: column;
+	text-align: center;
 	@include bp(medium) {
-		display: flex;
+		flex-direction: row;
 		margin: 0;
 	}
 	@include bp(large) {
@@ -20,11 +34,10 @@
 	}
 	li {
 		width: 15rem;
-		margin: 0 auto;
-		padding: 0.625rem 0;
+		margin: 0;
 		@include bp(large) {
 			width: 20rem;
-			margin: 0 auto;
+			margin: 0;
 		}
 	}
 }
@@ -47,7 +60,7 @@
 .social-github,
 .social-twitter,
 .social-email {
-	transform: translatex(2000px);
+	transform: translatex(-2000px);
 	opacity: 0;
 	transition: all .7s cubic-bezier(0.68, -0.25, 0.265, 1.25);
 }
@@ -63,3 +76,76 @@
 	transform: translatex(0);
 	opacity: 1;
 }
+
+.email-modal {
+	position: relative;
+}
+.email-form {
+	display: none;
+	position: absolute;
+	bottom: -2rem;
+	width: 80%;
+	left: 10%;
+	padding: 0.625rem;
+	background-color: $color-secondary--xlte;
+	border-radius: 0.313rem;
+	border: solid 0.125rem $color-secondary;
+	box-shadow: 0.313rem 0.313rem 0.313rem rgba(0,0,0,0.5), 
+			0.625rem 0.625rem 0.625rem rgba(0,0,0,0.4);
+	@include bp(medium) {
+		width: 60%;
+		left: 20%;
+		padding: 1rem;
+	}
+	span {
+		font-size: 1.5rem;
+		position: absolute;
+		top: 0.313rem;
+		right: 0.625rem;
+		cursor: pointer;
+	}
+	button {
+		@extend %btn;
+		display: block;
+		margin: 0.625rem auto;
+	}
+}
+
+fieldset {
+	border: none;
+	label {
+		margin-top: 0.313rem;
+		margin-bottom: 0.625rem;
+		display: block;
+	}
+	input[type="text"] {
+		@extend %input;
+		background-color: $color-primary--xlte;
+		&:focus {
+			@extend %focus;
+		}
+	}
+	input[type="email"] {
+		@extend %input;
+		background-color: $color-primary--xlte;
+		&:focus {
+			@extend %focus;
+		}
+	}
+	input[type="tel"] {
+		@extend %input;
+		background-color: $color-primary--xlte;
+		&:focus {
+			@extend %focus;
+		}
+	}
+	textarea {
+		@extend %input;
+		background-color: $color-primary--xlte;
+		height: 5rem;
+		&:focus {
+			@extend %focus;
+		}	
+	}
+}	
+

@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>SherylDarroch|Portfolio</title>
+		<title>SherylDarroch | Portfolio</title>
 		<link href="https://fonts.googleapis.com/css?family=Abel|Alike+Angular" rel="stylesheet">
 		<link rel="stylesheet" href="css/application.css">
 	</head>
 
 	<body>
-		<nav class="nav-main">
+		<nav class="nav-main flex">
 				<h1 class="logo">Sheryl <b>Darroch</b></h1>
 				<div class="nav-icon" id="nav-icon">
 					<div class="nav-icon-line"></div>
@@ -30,7 +30,7 @@
 						<a href="#contact">Contact</a>
 					</li>
 				</ul>
-				<ul class="nav-menu">
+				<ul class="nav-menu flex">
 					<li>
 						<span aria-hidden="true" data-icon="&#xe956;" class="icon icon-work"></span>
 						<a href="#work">Work</a>
@@ -56,10 +56,10 @@
 			</div>
 			</div>
 		
-		<div class="gallery">
-			<h1 id="work">Work</h1>
+		<div class="container gallery">
+			<h1 class="title" id="work">Work</h1>
 			<span class="sub-heading">I've chosen a collection of projects that highlight a variety of programming languages and skills. Take a closer look, and enjoy.</span>
-			<div class="gallery-grid">
+			<div class="gallery-grid flex">
 				<div class="column">
 					<img src="img/siteopt_sm.png" alt="Screen shot of site optimization web site">
 					<div class="overlay" data-index="0">
@@ -70,7 +70,7 @@
 					<div class="overlay2">
 						<span class="overlay-close">&times;</span>
 						<h3 class="overlay-title">Site Optimization</h3>
-						<p class="overlay-desc">Optimized an existing web site to improve its speed and performance. Reduced http requests from 44 to 17, and file size from over 3MB to less than 1MB, while maintaining the integrity of the design and functionality.</p>
+						<p class="overlay-desc">Optimized an existing web site to improve its speed and performance. Reduced http requests from 44 to 17 and file size from over 3MB to less than 1MB, while maintaining the integrity of the design and functionality.</p>
 						<a class="overlay-link" href="https://sheryldarroch.github.io/site-optimization/" target="_blank">See it in action &#10095;</a>
 						<a class="overlay-link" href="https://github.com/sheryldarroch/site-optimization" target="_blank">Checkout the code &#10095;</a>
 					</div>
@@ -102,7 +102,7 @@
 					<div class="overlay2">
 						<span class="overlay-close">&times;</span>
 						<h3 class="overlay-title">Web App Dashboard</h3>
-						<p class="overlay-desc">Took a mockup and created an interactive, responsive web app dashboard with JavaScript-driven charts and graphs, that includes tables and other user interface components that promote interactivity and usability.</p>
+						<p class="overlay-desc">Took a mockup and created an interactive, responsive web app dashboard with JavaScript-driven charts and graphs. It also includes tables and other user interface components that promote interactivity and usability.</p>
 						<a class="overlay-link" href="https://sheryldarroch.github.io/Web-App-Project/" target="_blank">See it in action &#10095;</a>
 						<a class="overlay-link" href="https://github.com/sheryldarroch/Web-App-Project" target="_blank">Checkout the code &#10095;</a>
 					</div>
@@ -159,10 +159,10 @@
 		</div> <!-- end .gallery -->
 		
 		<div class="details flex">
-			<div class="skills">
-				<h1 id="skills">Skills</h1>
-				<span class="sub-heading">In addition to my exceptional problem solving and troubleshooting skills, my extensive experience meeting and exceeding customer needs and expectations, and my excellent organziational and analytical skills, I have mastered the following technical skills.</span>
-				<ul class="skills-list">
+			<div class="container skills">
+				<h1 class="title" id="skills">Skills</h1>
+				<span class="sub-heading">In addition to my exceptional problem solving and troubleshooting skills, my extensive experience meeting and exceeding customer needs and expectations, and my excellent organizational and analytical skills, I have mastered the following technical skills.</span>
+				<ul class="skills-list flex">
 					<li>HTML5</li>
 					<li>CSS3/SASS</li>
 					<li>JavaScript/JQuery</li>
@@ -177,22 +177,22 @@
 					<li>Site Optimization</li>
 					</ul>
 			</div>
-			<div class="Education">
-				<h1>Education</h1>
-				<span>I am a lifelong learner who believes that knowledge comes from so much more than formal education; and yet, I have had my share of formal education, so here it is.</span>
-				<ul>
-					<li>Front End Web Development TechDegree, Treehouse</li>
-					<li>Masters of Social Work, Wayne State University</li>
-					<li>Bachelors of Science, Human Resources Development, Minor in Management, Specialization in Training and Development, Oakland University</li>
+			<div class="container education">
+				<h1 class="title">Education</h1>
+				<span class="sub-heading">I am a lifelong learner who believes that knowledge comes from so much more than formal education; and yet, I've had my share, so here it is.</span>
+				<ul class="ed-list">
+					<li><strong>Front End Web Development TechDegree,</strong> Treehouse</li>
+					<li><strong>Masters of Social Work,</strong> Wayne State University</li>
+					<li><strong>Bachelors of Science, Human Resources Development, Minor in Management, Specialization in Training and Development,</strong> Oakland University</li>
 				</ul>
 			</div>
 		</div>
-		<div class="contact">
-			<h1 id="contact">Contact</h1>
+		<div class="container contact">
+			<h1 class="title" id="contact">Contact</h1>
 			<span class="sub-heading">I'm currently looking for a full-time front-end web developer position and freelance work. I'd love to discuss how we can work together to make beautiful things. Contact me today.</span>
-			<ul class="contact-list">
+			<ul class="contact-list flex">
 					<li>
-						<svg class="social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 430.117 430.118" style="enable-background:new 0 0 430.117 430.118;" xml:space="preserve">
+						<svg class="social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_0" x="0px" y="0px" viewBox="0 0 430.117 430.118" style="enable-background:new 0 0 430.117 430.118;" xml:space="preserve">
 							<g>
 								<path id="LinkedIn__x28_alt_x29_" d="M398.355,0H31.782C14.229,0,0.002,13.793,0.002,30.817v368.471   c0,17.025,14.232,30.83,31.78,30.83h366.573c17.549,0,31.76-13.814,31.76-30.83V30.817C430.115,13.798,415.904,0,398.355,0z    M130.4,360.038H65.413V165.845H130.4V360.038z M97.913,139.315h-0.437c-21.793,0-35.92-14.904-35.92-33.563   c0-19.035,14.542-33.535,36.767-33.535c22.227,0,35.899,14.496,36.331,33.535C134.654,124.415,120.555,139.315,97.913,139.315z    M364.659,360.038h-64.966V256.138c0-26.107-9.413-43.921-32.907-43.921c-17.973,0-28.642,12.018-33.327,23.621   c-1.736,4.144-2.166,9.94-2.166,15.728v108.468h-64.954c0,0,0.85-175.979,0-194.192h64.964v27.531   c8.624-13.229,24.035-32.1,58.534-32.1c42.76,0,74.822,27.739,74.822,87.414V360.038z M230.883,193.99   c0.111-0.182,0.266-0.401,0.42-0.614v0.614H230.883z" fill="#808080"/>
 							</g>
@@ -277,7 +277,7 @@
 						<p class="social social-github"><a href="http://github.com/sheryldarroch">github.com/sheryldarroch</a></p>
 					</li>
 					<li>
-						<svg class="social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
+						<svg class="social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_2" x="0px" y="0px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
 							<g>
 								<g id="post-twitter">
 									<path d="M459,0H51C22.95,0,0,22.95,0,51v408c0,28.05,22.95,51,51,51h408c28.05,0,51-22.95,51-51V51C510,22.95,487.05,0,459,0z     M400.35,186.15c-2.55,117.3-76.5,198.9-188.7,204C165.75,392.7,132.6,377.4,102,359.55c33.15,5.101,76.5-7.649,99.45-28.05    c-33.15-2.55-53.55-20.4-63.75-48.45c10.2,2.55,20.4,0,28.05,0c-30.6-10.2-51-28.05-53.55-68.85c7.65,5.1,17.85,7.65,28.05,7.65    c-22.95-12.75-38.25-61.2-20.4-91.8c33.15,35.7,73.95,66.3,140.25,71.4c-17.85-71.4,79.051-109.65,117.301-61.2    c17.85-2.55,30.6-10.2,43.35-15.3c-5.1,17.85-15.3,28.05-28.05,38.25c12.75-2.55,25.5-5.1,35.7-10.2    C425.85,165.75,413.1,175.95,400.35,186.15z" fill="#808080"/>
@@ -316,7 +316,7 @@
 						</svg>
 						<p class="social social-twitter"><a href="http://twitter.com/@sheryldarroch">@sheryldarroch</a></p>
 					<li>
-						<svg class="social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 485.211 485.211" style="enable-background:new 0 0 485.211 485.211;" xml:space="preserve">
+						<svg class="social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_3" x="0px" y="0px" viewBox="0 0 485.211 485.211" style="enable-background:new 0 0 485.211 485.211;" xml:space="preserve">
 							<g>
 								<path d="M485.211,363.906c0,10.637-2.992,20.498-7.785,29.174L324.225,221.67l151.54-132.584   c5.895,9.355,9.446,20.344,9.446,32.219V363.906z M242.606,252.793l210.863-184.5c-8.653-4.737-18.397-7.642-28.908-7.642H60.651   c-10.524,0-20.271,2.905-28.889,7.642L242.606,252.793z M301.393,241.631l-48.809,42.734c-2.855,2.487-6.41,3.729-9.978,3.729   c-3.57,0-7.125-1.242-9.98-3.729l-48.82-42.736L28.667,415.23c9.299,5.834,20.197,9.329,31.983,9.329h363.911   c11.784,0,22.687-3.495,31.983-9.329L301.393,241.631z M9.448,89.085C3.554,98.44,0,109.429,0,121.305v242.602   c0,10.637,2.978,20.498,7.789,29.174l153.183-171.44L9.448,89.085z" fill="#808080"/>
 							</g>
@@ -351,14 +351,30 @@
 							<g>
 							</g>
 						</svg>
-						<p class="social social-email">Send me an email!</p>
+						<p id ="social-email" class="social social-email">Send me an email!</p>
 					</li>
 				</ul>
 		</div>
-		<div class="email-form">
-			<form action="https://formspree.io/sheryld1028@gmail.com" method="post">
+		<div class="email-modal">
+			<form action="https://formspree.io/sheryld1028@gmail.com" method="post" class="email-form" id="email-form">
+				<span id="form-close">&times;</span>
 				<fieldset>
+					<label for="name">Name</label>
+					<input type="text" id="name" name="user_name" required>
 				</fieldset>
+				<fieldset>
+					<label for="mail">Email</label>
+					<input type="email" id="mail" name="user_mail" required>
+				</fieldset>
+				<fieldset>
+					<label for="phone">Phone</label>
+					<input type="tel" id="phone" name="user_phone">
+				</fieldset>
+				<fieldset>
+					<label for="msg">Message</label>
+					<textarea id="msg" name="user_msg" required></textarea>
+				</fieldset>
+				<button type="submit" value="Submit">Send Me Your Email</button>
 			</form>
 		</div>
 		<footer class="footer">
